@@ -1,0 +1,57 @@
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" width="40%" height="100%"
+                style="padding: 2px;"></a>
+        <button mat-icon-button id="button-toggle-menu" (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+        <button mat-icon-button><mat-icon>search</mat-icon></button>
+        <span class="spacer"></span>
+
+        <button><mat-icon>sunny</mat-icon></button>
+        <button><mat-icon>notifications</mat-icon></button>
+        <button><mat-icon>fullscreen</mat-icon></button>
+        <button><mat-icon>sunny</mat-icon></button>
+    </nav>
+
+    <mat-drawer-container>
+        <mat-drawer #drawer opened="true" mode="side">
+            <mat-nav-list>
+                <span>Menu</span>
+                <mat-list-item>
+                    <button><mat-icon>dashboard</mat-icon>Dashboard</button>
+                </mat-list-item>
+                <span>Apps</span>
+                <mat-list-item>
+                    <button><mat-icon>calendar_today</mat-icon>Calendar</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button><mat-icon>tickets</mat-icon>Tickets</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button><mat-icon>folder</mat-icon>File Folder</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button><mat-icon>kanban_board</mat-icon>Kanban Board</button>
+                </mat-list-item>
+                <span>Custom</span>
+                <mat-list-item>
+                    <button><mat-icon></mat-icon>Auth Pages</button>
+                </mat-list-item>
+                <mat-list-item>
+                    <button><mat-icon>kanban_board</mat-icon>Extra Pages</button>
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div style="text-align: center;min-height: 600px;">
+                <router-outlet></router-outlet>
+            </div>
+
+        </mat-drawer-content>
+
+    </mat-drawer-container>
+
+
+    <div>
+
+    </div>
+</body>
